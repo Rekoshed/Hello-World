@@ -64,6 +64,21 @@ $ git push origin master # Отправка. orign - имя удалённого
 
 $ git pull # получить изменения
 	-----------------------------
+	
+	----------Моя первая отправка на GitHub -----------------
+	rekoshed@rekoshed-RV408-RV508:~/Github/repositori/Hello-World$ git push --set-upstream origin master
+	
+Username for 'https://github.com': rekoshed@yandex.ru
+Password for 'https://rekoshed@yandex.ru@github.com': 
+Подсчет объектов: 3, готово.
+Delta compression using up to 2 threads.
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (3/3), 1.80 KiB | 1.80 MiB/s, готово.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Rekoshed/Hello-World.git
+   5aa8707..a09e66d  master -> master
+Ветка «master» отслеживает внешнюю ветку «master» из «orig
+	---------------------------------------------------------
 
 
 
