@@ -1,0 +1,74 @@
+Пакет опубликован на Githab. Для этого создан репозиторий в Github и склонирван на локальник.
+Далее в склонированом репозитории пишется пакет.
+
+$ npm init # команда инициализации пакета. Создаётся 'package.json'
+
+    Пример структуры пакета:
+	~/projects/smallTalkWithHexlet$ ls -al
+	drwxrwxr-x  2 hex hex 4096 июн 12 16:35 ./
+	drwxrwxr-x 18 hex hex 4096 июн 12 16:22 ../
+	-rw-rw-r--  1 hex hex  340 июн 12 16:49 package.json
+	-rwxrwxr-x  1 hex hex   69 июн 12 16:29 sayBye.js*
+	-rwxrwxr-x  1 hex hex   52 июн 12 16:31 sayHi.js*
+
+ Согласно примеру меняем права доступа и исполнения:
+$ chmod 771 sayHi.js
+$ chmod 771 sayBye.js 
+$ chmod 664 package.json
+
+   Приводим package.json к виду:
+
+
+{
+  "name": "rekoshed",
+  "version": "1.0.0",
+  "description": "This is the tutorial version",
+  "main": "",
+  "bin": {
+    "sayHi": "./sayHi.js",
+    "sayBye": "./sayBye.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Rekoshed"
+  ],
+  "author": "Alexey Vidyakin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rekoshed/rekoshed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rekoshed/rekoshed/issues"
+  },
+  "homepage": "https://github.com/Rekoshed/rekoshed#readme"
+}
+ # в секции bin  указаны две символические ссылки, запуск которых откроет соответствующие файлы.
+
+  ---------------Публикуем пакет:
+ $ npm login # авторизуемся на сайте
+ Username: rekoshed
+ Password: 
+ Email: (this IS public) rekoshed@yandex.ru
+ Logged in as rekoshed on https://registry.npmjs.org/.
+ $ npm publish
+ ----------------
+
+$ npm bin -g # смотрим директорию исполняемых файлов. у меня установлен nvm, по этому путь выглятит так 
+/home/rekoshed/.nvm/versions/node/v11.14.0/bin
+
+
+ проверим с помощью grep директорию установки исполняемых файлов:
+	$ ls -la /home/rekoshed/.nvm/versions/node/v11.14.0/bin | grep 'say'
+	lrwxrwxrwx 1 rekoshed rekoshed       38 апр 18 07:59 sayBye -> ../lib/node_modules/rekoshed/sayBye.js
+	lrwxrwxrwx 1 rekoshed rekoshed       37 апр 18 07:59 sayHi -> ../lib/node_modules/rekoshed/sayHi.js
+Как и ожидалось, в этом каталоге лежат символические ссылки (об этом свидетельствует первый символ l, определяющий тип файла в строке атрибутов файла lrwxrwxrwx), которые мы можем запускать из любой точки файловой системы:
+
+        $ sayHi
+        Hello, Hexlet!
+        $ sayBye
+        Bye-bye! See you later, Hexlet!
+
+
