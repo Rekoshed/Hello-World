@@ -1,0 +1,15 @@
+const rad = (grad) => {
+let r = grad * Math.PI / 180
+return r
+} 
+console.log('rad 45  --==-- ' + rad(45));
+
+const solution = (a, b, c) => {
+let alfa = Math.sin(rad(b));
+let beta = Math.sin(rad(c));
+let gama = Math.sin(rad(180 -(b+c)));
+
+let s = 1/2 * a**2 * ((alfa * beta)/ gama);
+return s
+}
+console.log(solution(5,60,60));
