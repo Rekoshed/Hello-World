@@ -1,0 +1,32 @@
+.tt  {
+    padding : 5px;
+    margin : 5px;
+	text-decoration: underline;
+	text-shadow: 5px 5px 5px blue;
+	font-size: 2em;
+}
+
+
+.Firstbutton {
+	borden:
+}
+
+h5 {font-size:12px}
+.element {
+	font-size:10px;
+	
+}
+ul#menu li {display:inline;
+              color:red;
+              list-style-type:circle;}
+         
+body {
+    background : grey;
+    color : black;
+    font-size: 12px;
+}
+option {font-size:15px}
+label {font-size:15px}
+form {font-size: 15px}
+input {font-size:15px}
+a {font-size:12px}

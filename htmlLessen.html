@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />	
+<title> Document HTML5 </title>
+<link rel="stylesheet" href="./css/style.css"/>
+  
+</head>
+<body>
+  <ul id="menu">
+           <li> the Main  -
+           </li>
+           <li> Blog - </li>
+           <li> Forum - </li>
+           <li> About the site  </li>
+           </ul>
+ <p> Content of the document</p>
+	<p> Checking html validator:<br> 
+<span style = "color:blue ">	<a href=">https://validator.w3.org" > >https://validator.w3.org</span></a></p>
+	<details>
+	     <summary>Форматирование в <mark>HTML5</mark></summary>
+	     	<div class="element">
+	     <pre><ol style = "list-style-type:lower-alpha;">
+	     <li>Это <b> выделенный текст </b></li>
+	    <li> Это<strong> важный текст</strong></li>
+	     <li>Это <del>зачеркнутый </del>текст</li>
+	    <li> Это <s>недействительный</s> текст</li>
+	    <li> Это <em>важный текст</em></li>
+	     <li>Это <i>текст курсивом</i></li>
+	     <li>Это<ins> добавленный текст</ins></li>
+	     <li>Это<u> подчёркнутый текст</u></li>
+	    <li> X<sub>i</sub> = Y <sup><small>2</small></sup> + Z<sup><small>2</small></sup></li>
+	    </ol>	    
+	     </pre>
+	     </div>
+	     </details>
+   <br>
+   
+       <details>
+          <summary>Термины и определения <br></summary>
+   <div class="element">  
+       <dl>
+         <dt>Онтология</dt>
+         <dd>Раздел философии, изучающий фундаментальные принципы бытия</dd>
+         <dt>Гнессиология</dt>
+         <dd>Философская дисциплина, занимающаясч исследованиями, критикой и теорией познания</dd>
+         <dt>И прочее</dt>
+         <dd> И тут очень длинное определение прочего</dd>
+        </dl>
+        </div>
+        </details>
+   
+   <br>
+   <details>
+     <summary>Элемент iframe<br></summary>
+    <a href="file:///storage/sdcard0/Solo/lern_bom" > Этот текст можно вставить во фрэйм <br></a>
+    <iframe src="" width ="40%" height="30%"> 
+    
+    </iframe>
+    </details>
+    <br>
+    
+    <details>
+     <summary>Форма form и элементы форм <br></summary>
+     <div>
+    <form method="get" action="htmlLessen.html">
+    	<fieldset>
+    	<legend>Авторизация:</legend>
+    	<p>
+    <input type="text" name="login" value="rekoshed"/>
+    <input type="password" name="password"/>
+    <input type="submit" value="Enter"/>
+    </p>
+    <p>
+       <button type="submit" formmethod="get" formaction="index.html"> Отправить в index</button>
+       <button type="reset">Cansel</button>
+    
+    </p>
+    </fieldset>
+    </form>
+    <form  method="get">
+    	<fieldset>
+    	<legend> fieldset группа.legend легенда</legend>
+     
+       <p> <input type="text" name="userName" placeholder="Введите имя" size="18" /></p>
+       <p> <input type="text" name="userPhone" placeholder="Введите номер телефона" size="18" maxlength="11" /></p> 
+       <p>
+           <button type="submit"> Отправить</button>
+           <button type="reset"> Отмена</button>
+        </p>       
+    </fieldset>
+   	<fieldset>
+     		<legend>Список автозаполнения</legend>
+     <p><input list="carlist" type="text" name="model" placeholder="Введите модель автомобиля" size="27"/></p>
+     <p><button type="submit">to sand</button></p>
+     	</fieldset>
+     <datalist id="carlist" >
+          	<option value="Ford" label="focus2"/>
+          	<option value="chevrole" label="lacetti"/>
+          	<option value="Nissan" label="laurel"/>
+      </datalist>
+      	<fieldset>
+      	 <legend>Установлен автофокус</legend>
+      <p>
+      <label for="login"> Логин: </label>
+      <input type="text"  id="login" name="login" value="autofocus" autofocus/>
+      </p>
+      <p>
+      		<label for="password">Пароль:</label>
+      		<input type="password" id="password" name="password"/>
+      		</p>
+      		<p><button type="submit"> Отправить</button></p>     		
+      	</fieldset>
+      </div>
+     </form>
+    </details>
+    <br>
+    <details>
+    	<summary> Элементы для ввода чисел в форму</summary>
+    	<form>
+    	<p>
+    	<label for="age">Возраст:</label>
+    	<input type="number" list="ageList" id="age" name="age" step="1" min="1" max="100" placeholder="10"/>
+    	</p>
+    	<p><button type="submit"> Отправить</button></p>
+    	</form>
+    	<datalist id="ageList">
+    		<option value="18"> сосунок</option>
+    		<option value="25"/>
+    		<option value="36"/>
+    	</datalist>
+    	
+    	<form>
+    	<p>
+    	<label for="price">Цена:</label>
+    	1<input type="range" step="1" min="0" max="100" value="10" ib="price" name="price">100
+    	</p>
+    	<p><button type="submit">Отправить</button>
+    	</p>
+    	</form>
+    </details>
+    <br>
+    
+    <details>
+   
+    	<summary>Флажки и радиокнопки</summary>
+    		<form>
+    		 <div class="element">
+    		<p>Укажите марку грузовика</p>
+    		<p><input type="checkbox" checked name="ford"/>Ford</p>
+    		<p><input type="checkbox" checked name="mazda"/>Mazda</p>
+  			<p><input type="checkbox" checked name="uaz"/>UAZ</p>  			
+    		<p><input type="checkbox" checked name="zil"/>ZIL</p>
+    		<p><button type="submit">Отправить</button></p> 
+    				
+    				<p>Пол водителя укажите пжлст</p>
+    			<p><input type="radio" value="man" cheked name="gender">мужицкий</p>
+    			<p><input type="radio" value="woman" cheked name="gender">бабйий</p>
+    				<p>Укажите службу доставки</p>
+    		<p><input type="radio" value="gon" cheked name="mail">Стремительный шмель</p>
+    		<p><input type="radio" value="mon" cheked name="mail">Мерцающая луна</p>
+ 			<p><input type="radio" value="son" cheked name="mail">Несущее солнце</p>
+ 			<p><input type="radio" value="don" cheked name="mail">Карлеоне в пути</p>			   									
+    		<p><button type="submit">Отправить</button></p> 
+    		</div>
+    		</form>
+   
+   
+    </details>
+    <br>
+    <details>
+    <summary>Установка цвета</summary>
+     <form>
+    	<label for="favcolor"> Выберите цвет</label>
+    	<input type="color" id="favcolor" name="favcolor"/>
+    	<br>
+    	<label for="favcolor"> Выберите цвет</label>
+    	<input type="color" id="favcolor" name="favcolor" list="colors"/>
+    </form>
+    		<datalist id="colors">
+    		 <option value="#0000FF" label="blue">синий</option>
+    		 <option value="#008000" label="green">зеленый</option>
+    		 <option value="#ff0000" label="red">красный</option>
+    		 
+    		</datalist>
+    	
+    </details>
+    <br>
+    <details>
+    <summary> Форма ввода </summary>
+    <p>
+    <label for="email">Email:</label>
+    <input type="email" placeholder="user@gmail.com" id="email" name="email"/>
+    </p>
+    <p>
+    <label for="url">URL:</label>
+    <input type="url" id="url" name="url"/>
+    </p>
+    <p>
+    <label for="Phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone" placeholder="(XXX)-XXX-XXXX"/>
+    </p>
+    <p>
+    <button type="submit"> Отправить</button>
+    </p>
+    
+    </details>
+    
+    <br>
+    <details>
+    <summary> Форма ввода даты.</summary>
+    <p>
+    <label for="firstname">Имя:</label>
+    <input type="text" placeholder="Alexey" id="firstname" name="firstname"/>
+    </p>
+    <p>
+    <label for="date">Дата рождения:</label>
+    <input type="date" id="date" name="date"/>
+    </p>
+    <p>
+    
+    <button type="submit"> Отправить</button>
+    </p>
+    
+    </details>
+    <br>
+    
+    <details>
+    <summary>Отправка файлов</summary>
+    <form enctype="multipart/form-data" method="post" action="http://localhost:808/postfile.php">
+    	<p>
+    		<input type="file" name="file"/>
+    		
+    	</p>
+    	<p><input type="file" name="file" multiple/>multiple</p>
+    	
+    	
+    	<p><input type="submit" value="отправить"/>
+  </p>
+  </form>
+  </details>
+
+<br>
+<details>
+	<summary>Выпадающий список  select</summary>
+	<div class="element">
+		<form method="get">
+	<p>
+	<label for="main">Выберите раздел - </label>
+		<select id="main" name="main">
+	<option value="form"> Form</option>
+	<option value="select"> Список</option>
+	<option value="file"> Отправка</option>
+	<option value="color"> Выбор цвета</option>
+	</select>
+	</p>
+	<br>
+	<p>
+	<label for="select">Выберите раздел - </label>
+	<select id="select" name="select">
+		<option disabled selected>Не выбрать,но верхний. </option>
+		<option value="disabled">т.е не выбрать</option>
+		<option value="selected"> т.е первый в списке</option>
+		</select>
+	</p>
+		<br>
+		<p>
+		<label for="select2"> Множественный выбор - </label>
+		<select multiple id="select2" name="select2">
+		<option value="mainn"> the main </option>
+		<option value="disabled" disabled>т.е не выбрать</option>
+		<option value="selected" selected> т.е первый в списке</option>
+		<option value="form"> Form</option>
+		<option value="select"> Список</option>
+		<option value="file"> Отправка</option>
+		<option value="color"> Выбор цвета</option>
+		</select>
+		</p>
+		
+		<br>
+		<p>
+		<label for="opt"> Групировка тегом optgroup- </label>
+		<select  id="opt" name="opt">
+			<optgroup label="Color">
+		<option value="grey"> grey </option>
+		<option value="red" > red</option>
+		<option value="yelow" > yelow</option>
+		</optgroup>
+		<optgroup label="Действие">
+		<option value="form"> Form</option>
+		<option value="select"> Список</option>
+		<option value="file"> Отправка</option>
+		<option value="color"> Выбор цвета</option>	
+		</optgroup>
+		</select>
+		</p>
+		 <input type="submit" value="Отправить"/>				
+		</form>
+		</div>
+	</details>
+<br>
+<details>
+	<summary>Коментарии textarea</summary>
+	<div class="element">
+		  <form method="get">
+		  <p>
+		  <label for="comment"> Ваш коментарий. 30х7</label>
+		  <br>
+		  <textarea id="comment" name="comment" placeholder="Написать коментарий" cols="30" rows="7"></textarea>
+		  </p>
+		  <p><input type="submit" value="Добавить"/></p>
+	  </form>
+	 </div>
+</details>
+    <br>
+ <details>
+  <summary>Валидация в HTML5</summary>
+   <form method="get">
+   <p>
+   <label for="login"> Логин:</label>
+   <input type="text" required id="login" name="login"/>
+   </p>
+   <p>
+   <label for="age"> Возраст:</label>
+   <input type="number" min="2" max="64" value="18" id="age" name="age"/>
+   </p>
+    <p>
+     <label for="phone"> Телефон:</label>
+     <input type="text" placeholder="+1-234-567-8901" pattern="\+\d-\d{3}-\d{3}-\d{4}" id="phone" name="phone"/>
+     </p>
+    <p><input type="submit" value="Отправить"/></p>
+    <p><input type="submit" value="Отправить без валидации" formnovalidate/></p>
+   </form>
+  </details>
+</body>
+
+	
+
+</html>
