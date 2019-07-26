@@ -33,7 +33,8 @@ dir="/home/user/myDisk"
 
 ---------- INSTALL-----------
 
-$sudo apt-get install mc $ Kонсольный файловый менеджер midnight commander
+$sudo apt-get install mc # Kонсольный файловый менеджер midnight commander
+$sudo apt-get install gparted #утилита для разметки дискового пространства
 
 
 
@@ -41,6 +42,7 @@ $sudo apt-get install mc $ Kонсольный файловый менеджер
 
 $ code # запуск visual studio code
 $ mc   # Midnight Commander Консольный файловый менеджер
+$ gparted # запуск установленной утилиты дискового простанства
 
 -------- ССЫЛКИ ДЛЯ УСТАНОВКИ СОФТА ----------------
 
@@ -48,4 +50,14 @@ http://bobrowski.ru/twin-panel-file-managers/  #сборка консолых ф
 
 ------- КОМАНДЫ ДЛЯ УСТАНОВКИ СОФТА -----------------
 
-$sudo apt-get install gparted #утилита для разметки дискового пространства
+	******Установка кода Visual Studio на Ubuntu******
+
+	 выполните следующие действия:
+ $ sudo apt update #  обновите индекс пакетов
+ $ sudo apt install software-properties-common apt-transport-https wget # установите зависимости 
+ $ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add - # Затем импортируйте ключ Microsoft GPG
+ $ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" # включите репозиторий кода Visual Studi
+ $ sudo apt install code #  установите последнюю версию кода Visual Studio
+
+	*************************************************
+
