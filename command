@@ -32,10 +32,11 @@ dir="/home/user/myDisk"
 
 
 ---------- INSTALL-----------
-
+$sudo apt install php # быстро установит php
+$sudo apt install vim-gnome #  редактор Vim  и улучшеный Vim с подсветкой синтаксииса
 $sudo apt-get install mc # Kонсольный файловый менеджер midnight commander
 $sudo apt-get install gparted #утилита для разметки дискового пространства
-
+$sudo apt install curl #  необходим для установки composer  и пр.
 
 
 ----------КОМАНДЫ ЗАПУСКА ---------
@@ -43,7 +44,7 @@ $sudo apt-get install gparted #утилита для разметки диско
 $ code # запуск visual studio code
 $ mc   # Midnight Commander Консольный файловый менеджер
 $ gparted # запуск установленной утилиты дискового простанства
-
+$ gvim # текстовый редактор
 -------- ССЫЛКИ ДЛЯ УСТАНОВКИ СОФТА ----------------
 
 http://bobrowski.ru/twin-panel-file-managers/  #сборка консолых файл менеджеров
