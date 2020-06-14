@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>команды терминала</title>
+        <link href="css/main.css" rel="stylesheet">
+  	</head>
+  	
+  	<body>
+  		<header>
+  		<h1></h1>
+  		<nav>
+			<ul>
+              <a href="CMD.html"><li>home</li></a>
+              <a href="#yandex"><li>Yandex</li></a>
+              <a href="#install"><li>Install</li></a>
+              <a href="#play"><li> Команды запуска</li></a>
+              <a href="#soft"><li>Установка софта</li></a>
+              <a href="#contact"><li>contact</li></a>
+              <a href="elements.html"><li>Elements</li></a>
+            </ul>
+  		</header>
+  		
+  		<main>
+  <section id="yandex">	
+	<h2>Yandex disk</h2>
+	 <article class="cmd">
+
+<p>start <span>— запустить демон и синхронизировать все папки, кроме указанных в списке исключений </span>exclude-dirs.</p>
+$ yandex-disk start [OPTION]
+<p>status <span>— отобразить статус работы демона (состояние синхронизации, ошибки синхронизации, список синхронизированных файлов, общее и свободное пространство на Диске).</span></p>
+$ yandex-disk status [OPTION]
+<p>stop <span>— остановить работу демона.</span></p>
+$ yandex-disk stop [OPTION]
+<p>sync — <span>синхронизировать все папки, кроме указанных в списке исключений </span>exclude-dirs.</p>
+$ yandex-disk sync [OPTION]
+
+<p>publish <span>— получить публичную ссылку на указанный файл или папку </span>(FILE).</p>
+$ yandex-disk publish [OPTION] FILE
+<p>unpublish <span>— отменить публикацию для указанного файла или папки </span>(FILE).</p>
+$ yandex-disk unpublish FILE
+		</pre>
+	</article>
+	<article>	
+		<h3>Примеры использования команд</h3>
+		 <pre class="cmd">
+$ yandex-disk start -c ~/ydconfig/newconfig.cfg # запустить демон и синхронизацию с указанным файлом конфигурации 
+$ yandex-disk start --exclude-dirs=Foto # не синхронизировать папку Foto
+$ yandex-disk sync --read-only # синхронизировать папки в режиме read-only
+$ yandex-disk publish Foto # получить публичную ссылку на папку Foto
+
+Пример файла config.cfg
+
+# Путь к файлу с данными авторизации
+auth="/home/user/ydconfig/my_passwd"
+
+# Каталог для хранения локальной копии Диска.
+dir="/home/user/myDisk"
+
+# Не синхронизировать указанные каталоги.
+#exclude-dirs="exclude/dir1,exclude/dir2,path/to/another/exclude/dir"
+		</pre>
+	</article>
+</section>
+<section id="install">
+	<h2>---------- INSTALL-----------</h2>
+	 <article>
+<p>$sudo apt install php # быстро установит php	</p>
+<p>$sudo apt install vim-gnome #  редактор Vim  и улучшеный Vim с подсветкой синтаксииса</p>
+<p>$sudo apt-get install mc # Kонсольный файловый менеджер midnight commander</p>
+<p>$sudo apt-get install gparted #утилита для разметки дискового пространства</p>
+<p>$sudo apt install curl #  необходим для установки composer  и пр.</p>
+	
+	 </article>
+	</section>
+	<section id="play">
+
+<h2>Команды запуска приложений</h2>
+
+	<article class="cmd">
+	 
+<p>$ code # запуск visual studio code</p>
+$ mc   # Midnight Commander Консольный файловый менеджер
+<p>$ gparted # запуск установленной утилиты дискового простанства</p>
+$ gvim # текстовый редактор
+	 </pre>
+	</article>
+	</section>
+	<section id="soft">
+
+<h2> Софт  с репозиторием и зависимости</h2>
+<article>
+	<h3>******Установка кода Visual Studio на Ubuntu******</h3>
+
+	 <p><span>выполните следующие действия:</span></p>
+ $ sudo apt update #  обновите индекс пакетов
+ <p>$ sudo apt install software-properties-common apt-transport-https wget # установите зависимости </p>
+ $ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add - # Затем импортируйте ключ Microsoft GPG
+ <p>$ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" # включите репозиторий кода Visual Studio</p>
+ $ sudo apt install code #  установите последнюю версию кода Visual Studio
+</article>
+<article>
+<h3>Ссылки для установки софта</h3>
+
+http://bobrowski.ru/twin-panel-file-managers/  #сборка консолых файл менеджеров
+</article>
+</section>
+	*************************************************
+		</main>
+		
+		<footer>
+		
+		</footer>

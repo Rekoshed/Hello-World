@@ -1,0 +1,28 @@
+*{
+	box-sizing: border-box;
+          
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root {
+    
+    --code-color: #073470;
+    --code-fontfamily: Anonymous Pro;
+    --python: #101569;
+    --main-color: #f66fff;
+    --kod:#004510;
+    --back-code:#ffc;
+    --back-pre:#ffc;
+    --back-cmd:#eee;
+    --strong-color:rgb(48, 33, 2);
+}
+pre {
+overflow:auto;
+font-size:1.1em;
+}
+span {color:var(--code-color);}
+	
+.cmd{/*стилизуем команды терминала*/
+color:purple;
+font-weight:800;
+background-color:var(--back-cmd);
+}
