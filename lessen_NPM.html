@@ -1,20 +1,48 @@
-Пакет опубликован на Githab. Для этого создан репозиторий в Github и склонирван на локальник.
-Далее в склонированом репозитории пишется пакет.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+  <title>Hello-World</title>
+  
+<link  href="css/main.css" rel="stylesheet">
+<script src ="js/main.js"></script>
+</head>
+<body>
+<header>
+<h1>NPM</h1>
+<nav>
+<!--script>
+toolbar('index.html','');
+</script-->
+</nav>
+</header> 
+<main>
 
-$ npm init # команда инициализации пакета. Создаётся 'package.json'
+ <section id=""> 
+<h2>Создаём простой пакет</h2>
+<div class="warning">
+	<p><strong>
+Пакет публикуем на Githab. Для этого создём репозиторий в Github и склонируем на локальник.
+Далее в склонированом репозитории пишем пакет.
+</strong></p>
+</div>
+<article>
+<p><span>$ npm init </span># команда инициализации пакета. Создаётся 'package.json'</p>
 
-    Пример структуры пакета:
-	~/projects/smallTalkWithHexlet$ ls -al
-	drwxrwxr-x  2 hex hex 4096 июн 12 16:35 ./
-	drwxrwxr-x 18 hex hex 4096 июн 12 16:22 ../
-	-rw-rw-r--  1 hex hex  340 июн 12 16:49 package.json
-	-rwxrwxr-x  1 hex hex   69 июн 12 16:29 sayBye.js*
-	-rwxrwxr-x  1 hex hex   52 июн 12 16:31 sayHi.js*
-
- Согласно примеру меняем права доступа и исполнения:
-$ chmod 771 sayHi.js
-$ chmod 771 sayBye.js 
-$ chmod 664 package.json
+    <h3>Пример структуры пакета:</h3>
+<pre class="code">
+~/projects/small$ ls -al
+drwxrwxr-x  2 hex hex 4096 июн 12 16:35 ./
+drwxrwxr-x 18 hex hex 4096 июн 12 16:22 ../
+-rw-rw-r--  1 hex hex  340 июн 12 16:49 package.json
+-rwxrwxr-x  1 hex hex   69 июн 12 16:29 sayBye.js*
+-rwxrwxr-x  1 hex hex   52 июн 12 16:31 sayHi.js*
+</pre>
+ <h3>Согласно примеру меняем права доступа и исполнения:</h3>
+<span>$ chmod 771 sayHi.js
+<p>$ chmod 771 sayBye.js </p>
+$ chmod 664 package.json</span>
 
    Приводим package.json к виду:
 
@@ -70,5 +98,8 @@ $ npm bin -g # смотрим директорию исполняемых фай
         Hello, Hexlet!
         $ sayBye
         Bye-bye! See you later, Hexlet!
-
-
+</article>
+</section>
+</main>
+</body>
+</html>

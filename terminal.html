@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Терминал.Команды</title>
+		<link  href="css/main.css" rel="stylesheet">
+
+		<script src ="js/main.js"></script>
+     </head>
+     <body>
+      <header>
+            <h1>Команды для работы с файлами и директориями</h1>
+      <nav>
+      <script>
+      toolbar('index.html','');
+      </script>
+      </nav>
+      </header> 
+      <main>
+<section id="cd"> 
+   <h2>Перейти <span class="cmd">cd</span></h2>
+   <pre>
+$ <span class="cmd">cd</span>		     # без аргумента переход в домашнюю директорию
+$ <span class="cmd">cd rekoshed</span> # перейти в директорию <span>'rekoshed'. rekoshed/html </span>- в директорию <span>html</span>
+$ <span class="cmd">cd .. </span>      # выйти из директории на уровень выше
+$ <span class="cmd">cd - </span>	   	 # выйти в предыдущее место
+$ <span class="cmd">cd ../..</span>    # выйти на два уровня выше. Аналогично <span>../../..</span> на три уровня выше и т.д.
+$ <span class="cmd">cd ~user</span>	 # перейти в домашнюю директорию пользователя user. 
+$ <span class="cmd">cd ~	</span>	 # перейти в корневую папку. <span>cd ~/rekoshed </span>- пример пути в мою домашнюю директорию. 
+   </pre>
+ </section>
+ <section id="ls">  
+<h2>Oтобразить <span class="cmd">ls, tree</span></h2>
+<pre>
+$ <span class="cmd">ls 	</span>	 # содержимое директории
+$ <span class="cmd">ls    -F  </span>     # Содержимое +тип содержимого
+<span class="cmd">-l</span>	 # детализация файлов и директорий	
+<span class="cmd">-a</span>	 # показать скрытые файлы и директории
+$ <span class="cmd">ls *[0-9]* </span>    # показать файлы и директории содержащие в имени цифры
+$<span class="cmd"> tree</span>		 # - показать дерево файлов и директорий, начиная от корня (/)
+$<span class="cmd"> lstree</span>	 # - показать дерево файлов и директорий, начиная от корня (/)
+$<span class="cmd"> pwd	</span>	 # показать путь к текущей директории
+</pre>
+  </section>
+  <section id="mkdir"> 
+<h2>Cоздать <span class="cmd">mkdir, touch</span></h2>
+<pre>
+$ <span class="cmd">mkdir dir1</span>	 	#- создать директорию с именем <span>'dir1'</span>
+$<span class="cmd"> mkdir dir1 dir2</span>	# - создать две директории одновременно
+$<span class="cmd"> mkdir -p /tmp/dir1/dir2</span> # - создать дерево директорий
+$ <span class="cmd">touch file	</span>	# - создать файл <span>'file'</span>. если файл существует, то произойдёт обновление параметров
+$ <span class="cmd">echo 'hello' > file </span>  # - будет создан файл '<span>file</span>' с записью '<span>hello</span>'. Если файл существует, он будет полностью перезаписан.  
+</pre>
+</section>
+<section id="rm">
+<h2> Удалить <span class="cmd">rm</span></h2>
+<pre>
+$ <span class="cmd">rm -f file1	</span>	# - удалить файл с именем '<span>file1</span>'
+$<span class="cmd"> rmdir dir1	</span>	# - удалить директорию с именем '<span>dir1</span>'
+$ <span class="cmd">rm -rf dir1	</span>	# - удалить директорию с именем '<span>dir1</span>' и рекурсивно всё её содержимое
+$ <span class="cmd">rm -rf dir1 dir2</span>	# - удалить две директории и рекурсивно их содержимое
+</pre>
+</section>
+<section id="mv">
+<h2>Перемещение/переименование <span class="cmd">mv</span></h2>
+<pre>
+$ <span class="cmd">mv file newfile      </span> # переименовать '<span>file</span>' в '<span>newfile</span>'. 
+# если 'newfile' папка, то файл будет перемещён в неё:
+$<span class="cmd"> mv file folder</span>	# переместить файл в папку (и все вложенные файлы и папки).
+# Вы можете переместить папку целиком (и все ее файлы и вложенные папки) в другое место, указав первый аргумент следующим образом:
+$<span class="cmd"> mv accounts.txt backups/accounts.old</span> # Если папки backups не существует, вы получите сообщение об ошибке.
+</pre>
+</section>
+<section id="cp">
+<h2>Скопировать <span class="cmd">cp</span></h2>
+<pre>
+$ <span class="cmd">cp file1 file2</span>	# - скопировать файл <span>file1</span> в файл <span>file2</span>
+$ <span class="cmd">cp dir/* .	</span>	# - копировать все файлы директории dir в текущую директорию
+$ <span class="cmd">cp -a /tmp/dir1 .</span>	# - копировать директорию <span>dir1 </span>со всем содержимым в текущую директорию
+$ <span class="cmd">cp -a dir1 dir2	</span># - копировать директорию <span>dir1</span> в директорию <span>dir2</span>
+$ <span class="cmd">cp -r dir1/* dir2	</span># - копировать содержимое директории <span>dir1</span> в директорию <span>dir2</span> включая подкаталоги
+$ <span class="cmd"> cp -rfu  ~/Yandex.Disk/Github/Rekoshed.github.io/* . </span> # копировать только изменённые файлы директории и всех поддиректорий в текущую директорию.
+
+</pre>
+</section>
+<section id="ln">
+<h2>Ссылка <span class="cmd">ln</span></h2>
+<pre>
+$ <span class="cmd">ln -s file1 lnk1 </span>	# - создать символическую ссылку на файл или директорию
+$<span class="cmd"> ln file1 lnk1 </span>	# - создать "жёсткую" (физическую) ссылку на файл или директорию
+</pre>
+</section>
+<section id="option"> 
+<h2> Опции </h2>
+	<ul> 
+		<li>	--attributes-only - не копировать содержимое файла, а только флаги доступа и владельца;</li>
+		<li>	-f, --force - перезаписывать существующие файлы;</li>
+		<li>	-i, --interactive - спрашивать, нужно ли перезаписывать существующие файлы;</li>
+		<li>	-L - копировать не символические ссылки, а то, на что они указывают;</li>
+		<li>	-n - не перезаписывать существующие файлы;</li>
+		<li>	-P - не следовать символическим ссылкам;</li>
+		<li>	-r - копировать папку Linux рекурсивно;</li>
+		<li> 	-s - не выполнять копирование файлов в Linux, а создавать символические ссылки;</li>
+		<li>	-u - скопировать файл, только если он был изменён;</li>
+		<li>	-x - не выходить за пределы этой файловой системы;</li>
+		<li>	-p - сохранять владельца, временные метки и флаги доступа при копировании;</li>
+		<li>	-t - считать файл-приемник директорией и копировать файл-источник в эту директорию.</li>
+	</ul>			
+  </section>
+  
+ </body>
+</html>

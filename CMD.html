@@ -11,16 +11,17 @@
   	
   	<body>
   		<header>
-  		<h1></h1>
+  		<h1>Софт для Линукс</h1>
+  		<h3 class="subheader">Установка в командной строке</h3>
   		<nav>
 			<ul>
               <a href="CMD.html"><li>home</li></a>
               <a href="#yandex"><li>Yandex</li></a>
-              <a href="#install"><li>Install</li></a>
+              <a href="#install"><li>Install.Установка из пакета</li></a>
               <a href="#play"><li> Команды запуска</li></a>
-              <a href="#soft"><li>Установка софта</li></a>
-              <a href="#contact"><li>contact</li></a>
-              <a href="elements.html"><li>Elements</li></a>
+              <a href="#soft"><li>Установка софта с репозитория</li></a>
+              <a href="#link"><li>Ссылки для установки софта</li></a>
+              <a href="#"><li>####</li></a>
             </ul>
   		</header>
   		
@@ -44,35 +45,34 @@ $ yandex-disk publish [OPTION] FILE
 $ yandex-disk unpublish FILE
 		</pre>
 	</article>
-	<article>	
+	<article class="cmd">	
 		<h3>Примеры использования команд</h3>
-		 <pre class="cmd">
-$ yandex-disk start -c ~/ydconfig/newconfig.cfg # запустить демон и синхронизацию с указанным файлом конфигурации 
-$ yandex-disk start --exclude-dirs=Foto # не синхронизировать папку Foto
-$ yandex-disk sync --read-only # синхронизировать папки в режиме read-only
-$ yandex-disk publish Foto # получить публичную ссылку на папку Foto
 
-Пример файла config.cfg
+<p>$ yandex-disk start -c ~/ydconfig/newconfig.cfg <span># запустить демон и синхронизацию с указанным файлом конфигурации</span></p> 
+$ yandex-disk start --exclude-dirs=Foto<span> # не синхронизировать папку Foto</span>
+<p>$ yandex-disk sync --read-only <span># синхронизировать папки в режиме read-only</span></p>
+$ yandex-disk publish Foto <span># получить публичную ссылку на папку Foto</span>
 
-# Путь к файлу с данными авторизации
+<p><span class="subheader">Пример файла config.cfg:</span></p>
+
+<p><span># Путь к файлу с данными авторизации</span></p>
 auth="/home/user/ydconfig/my_passwd"
 
-# Каталог для хранения локальной копии Диска.
+<p><span># Каталог для хранения локальной копии Диска.</span></p>
 dir="/home/user/myDisk"
 
-# Не синхронизировать указанные каталоги.
-#exclude-dirs="exclude/dir1,exclude/dir2,path/to/another/exclude/dir"
-		</pre>
+<p><span># Не синхронизировать указанные каталоги.</span></p>
+exclude-dirs="exclude/dir1,exclude/dir2,path/to/another/exclude/dir"
 	</article>
 </section>
 <section id="install">
-	<h2>---------- INSTALL-----------</h2>
-	 <article>
-<p>$sudo apt install php # быстро установит php	</p>
-<p>$sudo apt install vim-gnome #  редактор Vim  и улучшеный Vim с подсветкой синтаксииса</p>
-<p>$sudo apt-get install mc # Kонсольный файловый менеджер midnight commander</p>
-<p>$sudo apt-get install gparted #утилита для разметки дискового пространства</p>
-<p>$sudo apt install curl #  необходим для установки composer  и пр.</p>
+	<h2>INSTALL</h2>
+	 <article class="cmd">
+<p>$sudo apt install php <span># быстро установит php</span>	</p>
+<p>$sudo apt install vim-gnome <span>#  редактор Vim  и улучшеный Vim с подсветкой синтаксииса</span></p>
+<p>$sudo apt-get install mc <span># Kонсольный файловый менеджер midnight commander</span></p>
+<p>$sudo apt-get install gparted <span>#утилита для разметки дискового пространства</span></p>
+<p>$sudo apt install curl <span>#  необходим для установки composer  и пр.</span></p>
 	
 	 </article>
 	</section>
@@ -82,30 +82,32 @@ dir="/home/user/myDisk"
 
 	<article class="cmd">
 	 
-<p>$ code # запуск visual studio code</p>
-$ mc   # Midnight Commander Консольный файловый менеджер
-<p>$ gparted # запуск установленной утилиты дискового простанства</p>
-$ gvim # текстовый редактор
+<p>$ code <span># запуск visual studio code</span></p>
+$ mc  <span> # Midnight Commander Консольный файловый менеджер</span>
+<p>$ gparted <span># запуск установленной утилиты дискового простанства</span></p>
+$ gvim <span># текстовый редактор vim</span>
 	 </pre>
 	</article>
 	</section>
 	<section id="soft">
 
 <h2> Софт  с репозиторием и зависимости</h2>
-<article>
-	<h3>******Установка кода Visual Studio на Ubuntu******</h3>
+<article class="cmd">
+	<h3>Установка  Visual Studio на Ubuntu</h3>
 
-	 <p><span>выполните следующие действия:</span></p>
- $ sudo apt update #  обновите индекс пакетов
- <p>$ sudo apt install software-properties-common apt-transport-https wget # установите зависимости </p>
- $ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add - # Затем импортируйте ключ Microsoft GPG
- <p>$ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" # включите репозиторий кода Visual Studio</p>
- $ sudo apt install code #  установите последнюю версию кода Visual Studio
+	 <p><span class="subheader">выполните следующие действия:</span></p>
+ $ sudo apt update <span>#  обновите индекс пакетов</span>
+ <p>$ sudo apt install software-properties-common apt-transport-https wget <span># установите зависимости </span></p>
+ $ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add - <span># Затем импортируйте ключ Microsoft GPG</span>
+ <p>$ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" <span># включите репозиторий кода Visual Studio</span></p>
+ $ sudo apt install code <span>#  установите последнюю версию кода Visual Studio</span>
 </article>
+	</section>
+	<section id="link">
+		<h2>Ссылки для установки софта</h2>
 <article>
-<h3>Ссылки для установки софта</h3>
 
-http://bobrowski.ru/twin-panel-file-managers/  #сборка консолых файл менеджеров
+<a href="http://bobrowski.ru/twin-panel-file-managers/" >http://bobrowski.ru/twin-panel-file-managers/  <span>#сборка консолых файл менеджеров</span>
 </article>
 </section>
 	*************************************************

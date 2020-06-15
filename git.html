@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Hello-World.</title>
+	<link  href="css/main.css" rel="stylesheet">
+
+	<script src ="../Design/bild.js"></script>
+ </head>
+ <body>
+ <header>
+ 	<nav>
+     <script>
+ 		toolbar('index.html','');
+	 </script>
+	</nav>
+</header> 
+<main>
+ <section id="repo"> 
+<h2> РЕПОЗИТОРИЙ</h2>
+<pre>
+$ <span class="cmd">git push</span> </span># Отправить изменения 
+$ <span class="cmd">git pull</span> # Получить изменения
+# Команда инициализации репозитория
+$ <span class="cmd">git init</span>
+# команда инициализации центрального репозитория
+$ <span class="cmd">git init --bare</span>
+
+# Проверка работоспособности репозитория
+$ <span class="cmd">git status</span>
+</pre>
+<pre>
+# клонируем репозиторий
+$ <span class="cmd">git clone </span>[путь: центральный репозиторий] [путь: клон]  
+пример: '<span class="code">$ git clone ~/example_bare clone_of_example'</span>
+
+# Смотрим связь клона с репозиторием:
+$ <span class="cmd">git remote -v</span>
+<span class="code">'origin  /home/user/example_bare (fetch)'
+'origin  /home/user/example_bare (push)'</span>
+# То же самое через чтение конфига
+$ <span class="cmd">cat .git/config</span>
+<span class="code">[remote "origin"]
+url = /home/user/example_bare
+fetch = +refs/heads/*:refs/remotes/origin/*</span>
+-----------------------
+</pre>
+</section>
+<section id="commit">
+<h2>КОММИТ</h2>
+<pre>
+# Создаём файл
+$ <span class="cmd">touch README.md</span>
+# Меняем содержимое
+$ <span class="cmd">echo '# Hi' > README.md</span>
+# Так Git увидит новый файл
+$ <span class="cmd">git add README.md</span>
+# Коммит с сообщением 'init project'
+$ <span class="cmd">git commit -m 'init projecT'</span>
+----------------------
+# Посмотреть историю коммитов
+$ <span class="cmd">git log</span>
+</pre>
+<p><span class="cmd">$ git log -- <i>basicsDesign.html </i></span> # посмотореть историю коммитов конкретного файла </p>
+<p><span class="cmd">$ git log -p -- <i>basicsDesign.html </i></span> # посмотореть историю коммитов конкретного файла  c изменениями (diff)</p>
+<p> <span class="cmd">checkout 3f25701874aa5a2c16cc6275fa30baa5b6e477a6 <i>basicsDesign.html</i></span> # переключится на коммит конкретного файла</p>
+
+
+<p>
+# Зная идентификатор коммита можно посмотреть изменения в коде.
+<br>
+$<span class="cmd"> git show 3a64fccf14725593b7486ff09d6a6c325a5f8fcc</span>
+команда '<span>git diff</span>', запущенная без аргументов, показывает различия между репозиторием и вашей рабочей копией 
+</p>
+<p>' <span>.gitignore</span>' - этот файл поможет Git определить то, что точно не придётся коммитить.
+</p>
+<pre>
+$<span class="cmd"> git reset <i>path/to/file</i>  </span>   # сброс git add
+$ <span class="cmd">git checkout <i>path/to/file</i> </span> # сброс <span>git commit. </span>т.е. откат свежих изменений.
+</pre>
+<p>
+$ <span class="cmd">git checkout</span> [идентификатор] 
+# После этой команды, в рабочей копии окажется то состояние репозитория, которое было на момент коммита идентификатор.
+<br>
+$ <span class="cmd"> git checkout master </span> # возврат в свежий коммит</p>
+</p>
+</section>
+
+<section id="branch">
+<h2>ВЕТВЛЕНИЕ</h2>
+<pre>
+$<span class="cmd"> git branch</span> # смотрим название текущей ветки
+$<span class="cmd"> git branch new-feature</span> # создание новой ветки. new-feature - это название новой ветки
+$<span class="cmd"> git checkout new-feature </span># переключение на новую ветку
+$ <span class="cmd">git checkout ed8145e </span># переключились на необходимый коммит
+$ <span class="cmd">git status</span> #     проверили текущее  состояние
+<span class="code">HEAD detached at ed8145e </span># HEAD -это голова от которой растёт новая ветка
+----------------------------
+</pre>
+</section>
+<section id="push">
+<h2>ИЗМЕНЕНИЯ</h2>
+<p>
+$<span class="cmd"> git push origin master</span> # Отправка. <span>orign</span> - имя удалённого репозитория, 
+<span>maser</span> -ветка
+<br><br>
+Отслеживаемая ветка устанавливается командой '<span class="cmd">git push --set-upstream origin master.</span>' 
+<br><br>
+Эта команда выполняет два действия: 
+<ol>
+<li>устанавливает отслеживание </li>
+<li>отправляет изменения. </li>
+</ol>
+Она выполняется ровно один раз, далее можно отправлять изменения набирая просто <span>'git push'</span>. 
+<br><br>
+Информация об отслеживаемой ветки описывается в файле '<span>.git/config</span>' в виде секций <span>'[branch "имя ветки"]:</span>'
+<br>
+$ <span class="cmd">git pull</span> # получить изменения
+<br>
+-----------------------------
+</p>
+	<article>
+<h3>Моя первая отправка на GitHub </h3>
+<pre class="code">
+<span class="blue">rekoshed@rekoshed-RV408-RV508:~/Github/repositori/Hello-World</span>$ <span class="cmd">git push --set-upstream origin master</span>
+
+Username for 'https://github.com': rekoshed@yandex.ru
+Password for 'https://rekoshed@yandex.ru@github.com': 
+Подсчет объектов: 3, готово.
+Delta compression using up to 2 threads.
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (3/3), 1.80 KiB | 1.80 MiB/s, готово.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Rekoshed/Hello-World.git
+5aa8707..a09e66d  master -> master
+Ветка «master» отслеживает внешнюю ветку «master» из «orig
+---------------------------------------------------------
+</pre>
+</article>
+</section>
+  
+  
+   
+  </main>
+<footer>
+
+</footer>
+</body>
+</html>
