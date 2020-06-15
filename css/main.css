@@ -9,7 +9,8 @@
     --code-fontfamily: Anonymous Pro;
     --python: #101569;
     --main-color: #f66fff;
-    --code:#004510;
+	--code:#004510;
+	--background:white;
     --back-code:#ffc;
     --back-pre:#ffc;
     --back-cmd:#eee;
@@ -42,6 +43,11 @@
 	background-color: #ffffcc;
 	border-left: 6px solid #ffeb3b;
 	}
+	section > article > h3 {
+		color:var(--article-header-color);
+		background-color:var(--background);
+	}
+
 section > h2 {
 	background-color:var(--back-header);
 	color:var(--header-color);
@@ -71,6 +77,5 @@ font-family:Courier New;
 font-size:0.8 rem;
 }
 .subheader {color:Darkgreen}
-section > article > h3 {color:var(--article-header-color);}
 
 
