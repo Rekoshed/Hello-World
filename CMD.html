@@ -30,6 +30,11 @@
 	<h2>Yandex disk</h2>
 	 <article class="cmd">
 <h3> Управление Яндекс диском из терминала</h3>
+<p><span> Быстрая установка пакета .deb:</span>
+	<br> $ echo "deb http://repo.yandex.ru/yandex-disk/deb/ stable main" | sudo tee -a /etc/apt/sources.list.d/yandex-disk.list > /dev/null && wget http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG -O- | sudo apt-key add - && sudo apt-get update && sudo apt-get install -y yandex-disk
+</p>
+<p><span> выполните первоначальную настройку клиента:</span>
+	<br> $ yandex-disk setup </p>
 <p>start <span>— запустить демон и синхронизировать все папки, кроме указанных в списке исключений </span>exclude-dirs.</p>
 $ yandex-disk start [OPTION]
 <p>status <span>— отобразить статус работы демона (состояние синхронизации, ошибки синхронизации, список синхронизированных файлов, общее и свободное пространство на Диске).</span></p>
